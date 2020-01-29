@@ -1,3 +1,4 @@
+require 'pry'
 RSpec.describe 'Person' do
   let(:stella) { Person.new('Stella') }
   let(:blanche) { Person.new('Blanche') }
@@ -33,6 +34,7 @@ RSpec.describe 'Person' do
 
         it 'a person instance can change his/her bank_account amount' do
           people.each do |person|
+            
             original_amount = person.bank_account
             expect(person.bank_account += 1).to eq (original_amount + 1)
           end
